@@ -1,0 +1,952 @@
+/* Подключение шрифтов*/
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../font/Ubuntu-Regular.ttf") format("truetype");
+    font-weight: 400;
+   }
+
+@font-face {
+    font-family: "Ubuntu_bold";
+    src: url("../font/Ubuntu-Bold.ttf") format("truetype");
+    font-weight: 700;
+    }
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Шапка сайта */
+.header-logo-img, 
+.header-logo-img-logoPhone {
+    height: 28px;
+    width: auto;
+    transition: transform .25s ease-in-out; /* Плавная анимация для обоих логотипов */
+}
+
+.header-logo-img-logoPhone {
+    display: none;
+}  
+
+.icon-img {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.vr-line {
+    width: 1px;
+    height: 30px;
+    background-color: #dcdcdc;
+}
+
+.img-badge-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-img {
+    width: 18px;    
+    height: 18px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    object-fit: contain;
+}
+
+.fs-7 {
+    font-size: 14px;
+    color: #75758A;
+}
+
+.header-burger-btn:focus,
+.header-burger-btn:active {
+    box-shadow: none !important;
+}
+
+/* Эффект увеличения при наведении */
+.header-logo-container:hover .header-logo-img,
+.header-logo-container:hover .header-logo-img-logoPhone {
+    transform: scale(1.05); /* Увеличение логотипа*/
+}
+
+/* иконка бургера зелёная, когда меню открыто */
+body:has(.custom-menu-panel.show) .header-burger-btn img,
+header .btn:hover .icon-img,
+header .header-burger-btn:hover img,
+header .mobile-right-group .btn:hover img {
+    filter: invert(53%) sepia(85%) saturate(389%) hue-rotate(52deg) brightness(93%) contrast(85%) !important;
+}
+
+/* Подготовка всех кнопок в шапке для позиционирования линии */
+header .btn {
+    position: relative;
+}
+
+/* Линия */
+header .btn::after {
+    content: "";
+    position: absolute;
+    bottom: -19px; 
+    left: 50%;
+    transform: translateX(-50%) scaleX(0); 
+    width: 26px; 
+    height: 3px; 
+    background: linear-gradient(90deg, #8EE902 0, #4F9C2C 100%); 
+    transition: transform .2s ease; 
+    transform-origin: center;
+    z-index: 5;
+}
+
+/* появление линии */
+header .btn:hover::after {
+    transform: translateX(-50%) scaleX(1); 
+}
+
+/*Адаптив */
+@media (max-width: 991px) {
+    .text-end.me-4.d-none.d-md-block {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo-img {
+        display: none;
+    }
+    .header-logo-img-logoPhone {
+        display: block;
+    }
+    /* мобильный логотип по центру экрана */
+    .header-logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        margin: 0 !important;
+    }
+}
+
+/* Всплывающее меню */
+.custom-menu-panel {
+    top: 73px !important; /* Открытие ровно под шапкой */
+    max-width: 520px; 
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+    height: auto !important;
+    max-height: max-content !important;
+    transform: translateY(-100%);
+}
+
+.custom-menu-panel.show {
+    transform: translateY(0);
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0 !important; 
+    pointer-events: none;  
+}
+
+/* Ссылки меню */
+.menu-item {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 10px 5px 20px;
+    border-radius: 3px;
+    transition: all .1s ease;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+    color: #6fb722;
+}
+
+/* Линия разделения колонок */
+.menu-left-col {
+    border-color: #eee !important;
+}
+
+
+/* Главный Экран */
+.hero {
+    height: 600px;
+    background: url("../image/header.jpg") center/cover no-repeat;
+}
+
+/* Градиент АРЕНДА */
+.hero-word-gradient,
+/* зеленый кружок под текстом */
+.hero-circle {
+    background: linear-gradient(180deg, #8EE902 0, #4F9C2C 100%);
+}
+
+.hero-word-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* зеленый кружок под текстом */
+.hero-circle {
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: -21px;
+    z-index: 1; 
+}
+
+/*Преимущества*/
+.features {
+    background-color: #F5F5F5;
+}
+
+.feature-text {
+    font-size: 15px;
+    line-height: 1.3;
+    color: #000;
+}
+
+.feature-icon {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* Адаптив*/
+@media (min-width: 992px) {
+    .row-cols-lg-5 > * {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+/* Планшеты */
+@media (max-width: 992px) {
+    .hero {
+        height: 500px;
+        background: url("../image/headerTablet.png") center/cover no-repeat;
+    }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 576px) {
+    .hero {
+        height: 420px;
+        background: url("../image/headerPhone.png") center/cover no-repeat;
+    }
+    
+    .hero-circle {
+        width: 45px;
+        height: 45px;
+        bottom: -25px;
+        left: -20px;
+    }
+
+    .features {
+        background-color: #fff;
+    }
+
+    .feature-item {
+        background-color: #F5F5F5 !important;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 15px;
+        height: 140px; 
+    }
+
+    .feature-item .feature-text {
+        margin: 10px 0 0 0 !important;
+        font-size: 13px;
+    }
+
+    .feature-icon {
+        width: 38px;
+        height: 38px;
+    }
+    .w-100-mobile {
+        width: 100% !important;
+    }
+    
+    .w-100-mobile .feature-item {
+        height: auto;
+        padding: 25px 15px;
+    }
+}
+
+/* Карточки товара */
+.popular-title {
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.img-container {
+    height: 180px;
+}
+
+.product-img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.icon-action {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.2s ease; /* Добавляем плавность перехода */
+}
+
+/* Эффект наведения для иконок в сетке цен */
+
+/* При наведении на иконку она становится фирменной зеленой */
+.icon-action:hover {
+    filter: invert(53%) sepia(85%) saturate(389%) hue-rotate(52deg) brightness(93%) contrast(85%) !important;
+}
+
+
+/* Стили сетки цен */
+.product-prices .col-3 {
+    padding: 0 4px;
+}
+
+.product-prices .fs-7 {
+    font-size: 11px;
+    color: #75758A;
+}
+
+/* Кнопки*/
+/* Кнопка "Подробнее" */
+.btn-custom-outline {
+    border: none !important;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.12);
+    transition: background-color .2s ease;
+}
+
+.btn-custom-outline:hover {
+    background-color: #33471221 !important;
+}
+
+/* Кнопка "В корзину" */
+.btn-custom-dark {
+    background: linear-gradient(180deg, #8EE902 0, #4F9C2C 100%);
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(79,156,44,.25);
+    border: none;
+    transition: filter .2s ease;
+}
+
+.btn-custom-dark:hover {
+    filter: brightness(1.10);
+}
+
+/* Иконка корзины внутри кнопки */
+.btn-custom-dark .btn-cart-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Стрелки слайдера*/
+.popular-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
+}
+
+.popular-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.left-arrow { left: 12px !important; }
+.right-arrow { right: 12px !important; }
+
+/* Адаптив*/
+@media (max-width: 991.98px) {
+    .row-cols-sm-2 .col:nth-child(3) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .row-cols-sm-2 .col:nth-child(3) {
+        display: block !important;
+    }
+}
+
+/* Раздел "Вы ищете что-то конкретное?"*/
+.search-info-container,
+.search-text-block {
+    max-width: 900px;
+}
+
+.search-info-title {
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: .5px;
+}
+
+.search-info-text {
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+/*кнопка каталога */
+.search-info-btn {
+    background: linear-gradient(180deg, #8EE902 0, #4F9C2C 100%);
+    padding: 14px 48px;
+    font-size: 14px;
+    box-shadow: 0 5px 12px rgba(52, 148, 8, 0.548);
+    border: none;
+    transition: filter .2s ease;
+}
+
+.search-info-btn:hover {
+    filter: brightness(1.11);
+    color: #fff;
+}
+
+/* Белая кнопка поиска для моб. версии */
+.search-mobile-btn {
+    padding: 14px 54px;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+    border: none;
+   
+    transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease; 
+}
+
+.search-mobile-btn:hover {
+    background-color: #3347121a !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2); /* Тень становится глубже и мягче */
+}
+
+/* Форма поиска*/
+.bg-light-gray {
+    background-color: #F5F5F7 !important;
+}
+
+.search-input-group {
+    width: 250px;
+}
+
+.search-info-input {
+    font-size: 15px;
+    color: #75758A;
+    height: 52px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.08);
+}
+
+.search-info-input:focus {
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.06), 0 2px 8px rgba(79, 156, 44, .2);
+    border-color: #fff;
+    background-color: #F5F5F7;
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+    background: url("../image/search.svg") center/contain no-repeat;
+    pointer-events: none;
+}
+
+.search-clear {
+    width: 24px;
+    height: 24px;
+    background: url("../image/close.svg") center/contain no-repeat;
+    transition: transform .2s ease;
+}
+
+.search-clear:hover {
+    transform: scale(1.1);
+}
+
+/* Сетка категорий */
+.category-card {
+    position: relative;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+/* Плавный переход для исходного состояния карточки */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку категории */
+.category-card:hover {
+    transform: translateY(-5px); /* Слегка приподнимаем карточку вверх на 5px */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Добавляем мягкую легкую тень снизу */
+}
+
+.category-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.category-text span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+.bg-secondary-gray {
+    background-color: #75758A !important;
+}
+
+.bg-secondary-gray span {
+    color: #E2E2E6 !important;
+}
+
+/* Desktop-версия */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    padding: 0 14px;
+}
+
+.category-card:nth-child(1),
+.category-card:nth-child(2),
+.category-card:nth-child(3),
+.category-card:nth-child(5) { grid-column: span 1; }
+.category-card:nth-child(4) { grid-column: span 2; } /* 4-я карточка занимает 2 колонки снизу слева */
+
+
+/* Планшетная версия */
+@media (max-width: 991.98px) and (min-width: 576px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-areas:
+            "c1 c2"
+            "c3 c5"
+            "c4 c4";
+        gap: 18px;
+        padding: 0 18px;
+    }
+
+    .category-card:nth-child(1) { grid-area: c1; }
+    .category-card:nth-child(2) { grid-area: c2; }
+    .category-card:nth-child(3) { grid-area: c3; }
+    .category-card:nth-child(4) { grid-area: c4; grid-column: span 2; height: 240px; }
+    .category-card:nth-child(5) { grid-area: c5; }
+
+    .category-card:nth-child(1),
+    .category-card:nth-child(2),
+    .category-card:nth-child(3),
+    .category-card:nth-child(5) {
+        height: 260px;
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 575.98px) {
+    .search-info-btn,
+    .search-mobile-btn {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr; 
+        max-width: 430px;
+        margin: 40px auto 0;
+        padding: 0 12px;
+        gap: 16px;
+    }
+
+    .category-card {
+        grid-column: span 1 !important;
+        aspect-ratio: 1 / 1; 
+        height: auto;
+    }
+}
+
+/* Зарабатывайте вместе с нами */
+/* Фоновый цвет */
+.bg-light-section {
+    background-color: #F5F5F7 !important;
+}
+
+.how-container {
+    max-width: 1140px;
+}
+
+.how-title {
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: .5px;
+}
+
+.how-subtitle {
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+/*Стилизация карточек*/
+.how-step {
+    background-color: #fff !important;
+    min-height: 140px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding: 24px 15px !important;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.how-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .06) !important;
+}
+
+.how-step-text {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 12px !important; 
+}
+
+/* Иконки под текстом */
+.how-step .how-icon {
+    position: static !important; 
+    padding: 0 !important;
+}
+
+.how-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/*Кнопка */
+.how-btn {
+    background: linear-gradient(180deg, #8EE902 0, #4F9C2C 100%);
+    padding: 16px 44px;
+    font-size: 14px;
+    box-shadow: 0 5px 12px rgba(52, 148, 8, 0.548);
+    border: none;
+    transition: filter .2s ease;
+}
+
+.how-btn:hover {
+    filter: brightness(1.11);
+    color: #fff;
+}
+/*Адаптив*/
+@media (max-width: 575.98px) {
+    .how-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+    .how-step {
+        min-height: 110px;
+    }
+}
+
+
+/* Раздел Новости */
+.news-container {
+    max-width: 1140px;
+}
+
+.news-title {
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* карточки новости */
+.news-card {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Изображения внутри карточек */
+.news-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Контентные элементы */
+.news-date {
+    font-size: 13px;
+    color: #75758A;
+}
+.news-card-title {
+    font-family: "Ubuntu", sans-serif;
+    color: #000000;
+    line-height: 1.3;
+}
+.news-text {
+    font-size: 14px;
+    color: #555555 !important;
+    line-height: 1.5;
+}
+
+/* кнопка-ссылка */
+.news-btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    font-size: 14px;
+    font-family: "Ubuntu", sans-serif;
+    box-shadow: 0 5px 12px rgba(79, 156, 44, 0.35);
+    border: none;
+    transition: filter 0.2s ease;
+
+    padding: 15px 50px;
+}
+
+.news-btn:hover {
+    filter: brightness(1.11);
+    color: #fff;
+}
+
+/* Адаптивные медиа-запросы */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .news-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    .news-img {
+        height: 200px;
+    }
+}
+
+
+/* Раздел "Где мы на карте" */
+.bg-light-section {
+    padding: none;
+    background: #f8f8f8;
+    
+}
+
+/* Фон Карта*/
+.partners-bg {
+    background-image: url("../image/for map.png");
+    background-size: cover;
+    background-position: center;
+    
+    border-radius: none;
+    text-align: center;
+
+}
+.partners-title {
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+
+/* Стилизация карточки */
+.partner-card {
+    background-color: #ffffff !important;
+    max-width: 280px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.partner-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Иконка */
+.partner-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-top: 2px; 
+}
+
+/* Ссылки партнеров */
+.partner-link {
+    color: #4CAF50;
+    text-decoration: none;
+    word-break: break-all; 
+    transition: color 0.2s ease;
+}
+.partner-link:hover {
+    color: #388E3C;
+    text-decoration: underline;
+}
+
+/* Адаптив */
+@media (max-width: 575.98px) {
+    .partners-bg {
+        border-radius: 0px !important; 
+    }
+    .partner-card {
+        max-width: 100%; 
+    }
+}
+
+
+/*  Раздел "подписки" */
+.subscribe-wrapper {
+    background-color: #535965 !important;
+    font-family: "Ubuntu", sans-serif;
+    padding-top: 0 !important; 
+}
+.text-custom-green {
+    color: #8CE902 !important;
+}
+.bg-light-section {
+    margin-bottom: 0 !important;
+}
+.subscribe-wrapper {
+    margin-top: 0 !important;
+}
+/* Элементы текста */
+.sub-green, .sub-link {
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+.sub-white {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/* Стилизация иконок */
+.sub-icon {
+    object-fit: contain;
+    display: block;
+}
+
+.sub-icon-letter {
+    width: 34px;
+    height: 34px;
+}
+
+.sub-icon-phone {
+    width: 22px;
+    height: 22px;
+}
+
+/* Поле ввода почты */
+.sub-input {
+    font-size: 14px;
+    color: #333333;
+    height: 42px;
+}
+
+.sub-input::placeholder {
+    color: #999999;
+}
+
+.sub-input:focus {
+    box-shadow: none;
+    background-color: #ffffff;
+}
+
+/* Кнопка "Подписаться" */
+.sub-btn {
+    background-color: #4F9C2C !important;
+    color: #ffffff !important;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    height: 42px;
+    transition: background-color 0.2s ease;
+}
+
+.sub-btn:hover {
+    background-color: #438724 !important;
+}
+
+/* Ссылка заказа звонка */
+.sub-link {
+    transition: opacity 0.2s ease;
+}
+
+.sub-link:hover {
+    opacity: 0.85;
+}
+
+/* Адаптив*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .subscribe-wrapper {
+        padding-top: none;
+        padding-bottom: none;
+    }
+    
+    .sub-input {
+        font-size: 13px;
+    }
+    
+    .sub-btn {
+        font-size: 12px;
+        padding-left: none;
+        padding-right: none;
+    }
+}
+
+
+/* Адаптив подвала*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+ 
+  .footer-payments {
+    justify-content: flex-end !important;
+    margin-top: 0.5rem !important; 
+  }
+  
+ 
+  .footer-policy {
+    display: inline-block;
+    padding-left: 8.333%;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+     /* Скрываем "Зарабатывайте вместе с нами" */
+    .how-it-works {
+        display: none;
+    }
+
+    /* Скрываем Новости */
+    .news {
+        display: none;
+    }
+
+    /* Скрываем Партнёров */
+    .partners {
+        display: none;
+    }
+
+    /* Скрываем Подписку */
+    .subscribe-wrapper {
+        display: none;
+    }
+
+    /* Скрываем Подвал */
+    .footer {
+        display: none;
+    }
+}

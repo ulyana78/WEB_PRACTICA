@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoprokat 24</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Шапка -->    
+<header class="header">
+    <div class="header__inner">
+
+        
+        <!-- Левая часть (десктоп) -->
+        <div class="header__left">
+            <button class="header__burger">
+                <img src="image/menu.svg" alt="">
+            </button>
+        </div>
+
+        <!-- Мобильные иконки слева -->
+        <div class="header__mobile-left">
+            <img src="image/star.svg" class="icon-img" alt="">
+            <img src="image/compare.svg" class="icon-img" alt="">
+            <img src="image/shopping-cart.svg" class="icon-img" alt="">
+        </div>
+
+        <!-- Логотип -->
+        <div class="header__logo">
+            <img src="image/logo.png" class="logo-desktop" alt="">
+            <img src="image/logoPhone.png" class="logo-mobile" alt="">
+        </div>
+
+        <!-- Правая часть -->
+        <div class="header__right">
+
+            <div class="header__phone">
+                <div class="phone-number">+7 495 170‑39‑18</div>
+                <div class="phone-sub">Круглосуточно</div>
+            </div>
+
+            <div class="header__icons">
+                <img src="image/star.svg" alt="">
+                <img src="image/compare.svg" alt="">
+                <img src="image/shopping-cart.svg" alt="">
+                <div class="header__divider"></div> 
+            </div>
+
+            <img src="image/search.svg" class="icon-img" alt="">
+              <div class="header__divider"></div> 
+            <img src="image/user (1).svg" class="icon-img icon-user" alt="">
+            <img src="image/locked.svg" class="icon-img icon-lock" alt="">
+
+            <!-- Бургер для мобильной версии -->
+            <button class="header__burger mobile-burger">
+                <img src="image/menu.svg" alt="">
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- Главный экран -->
+<section class="hero">    
+      <div class="hero-title">
+        <div class="hero-circle"></div> 
+
+        <div class="hero-line hero-line-top">
+            <span class="hero-word-gradient">АРЕНДА</span> ФОТО
+        </div>
+        <div class="hero-line hero-line-middle">
+            И ВИДЕО
+        </div>
+        <div class="hero-line hero-line-bottom">
+            ОБОРУДОВАНИЯ
+        </div>
+    </div>
+</section>
+
+<section class="features">
+   <div class="features__inner">
+
+        <div class="feature-item">
+            <img src="image/listr.svg" alt="">
+            <p>Самый большой выбор техники</p>
+        </div>
+
+        <div class="feature-item">
+            <img src="image/timer.svg" alt="">
+            <p>Быстрое оформление заказа</p>
+        </div>
+
+        <div class="feature-item">
+            <img src="image/placeholderr.svg" alt="">
+            <p>Можно забрать заказ в пункте выдачи</p>
+        </div>
+
+        <div class="feature-item">
+            <img src="image/productr.svg" alt="">
+            <p>Доставка в любую точку Москвы</p>
+        </div>
+
+        <div class="feature-item">
+            <img src="image/money.svg" alt="">
+            <p>Оплата картой и наличными</p>
+        </div>
+
+    </div>
+</section>
+
+
+ <!-- Карточка товара -->
+<section class="popular">
+     <h2 class="popular__title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+
+     <div class="popular-slider-wrapper">
+
+        <!-- Левая стрелка -->
+        <button class="popular-arrow left-arrow">
+            <img src="image/left.png" alt="">
+        </button>
+
+    <div class="popular__grid">
+
+        <!-- Карточка -->
+        <div class="product-card">
+
+            <div class="product-icons">
+            <img src="image/compareBlack.svg" alt="">
+            <img src="image/star.svg" alt="">
+        </div>
+
+            <img src="image/camera1.png" alt="" class="product-img">
+
+            <h3 class="product-name">PowerShot SX620 HS</h3>
+            <div class="product-brand">Canon</div>
+
+            <div class="product-prices">
+                <div class="price-item">
+                    <div class="price-value">630 <span class="ruble">₽</span></div>
+                    <div class="price-label">Будний</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">750 <span class="ruble">₽</span></div>
+                    <div class="price-label">Выходной</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">4 380 <span class="ruble">₽</span></div>
+                    <div class="price-label">Неделя</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">12 250 <span class="ruble">₽</span></div>
+                    <div class="price-label">Месяц</div>
+                </div>
+            </div>
+
+            <div class="product-buttons">
+                <a href="#" class="btn-outline">Подробнее</a>
+                <a href="#" class="btn-dark">В корзину</a>
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="product-card">
+
+            <div class="product-icons">
+            <img src="image/compareBlack.svg" alt="">
+            <img src="image/star.svg" alt="">
+            </div>
+
+
+            <img src="image/camera2.png" alt="" class="product-img">
+
+            <h3 class="product-name">Sony CyberShot DSC-HX60</h3>
+            <div class="product-brand">Sony</div>
+
+            <div class="product-prices">
+                <div class="price-item">
+                    <div class="price-value">630 ₽</div>
+                    <div class="price-label">Будний</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">750 ₽</div>
+                    <div class="price-label">Выходной</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">4 380 ₽</div>
+                    <div class="price-label">Неделя</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">12 250 ₽</div>
+                    <div class="price-label">Месяц</div>
+                </div>
+            </div>
+
+            <div class="product-buttons">
+                <a href="#" class="btn-outline">Подробнее</a>
+                <a href="#" class="btn-dark">В корзину</a>
+            </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="product-card">
+
+            <div class="product-icons">
+            <img src="image/compareBlack.svg" alt="">
+            <img src="image/star.svg" alt="">
+        </div>
+
+
+            <img src="image/camera3.png" alt="" class="product-img">
+
+            <h3 class="product-name">Canon PowerShot SX620 HS</h3>
+            <div class="product-brand">Canon</div>
+
+            <div class="product-prices">
+                <div class="price-item">
+                    <div class="price-value">630 ₽</div>
+                    <div class="price-label">Будний</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">750 ₽</div>
+                    <div class="price-label">Выходной</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">4 380 ₽</div>
+                    <div class="price-label">Неделя</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-value">12 250 ₽</div>
+                    <div class="price-label">Месяц</div>
+                </div>
+            </div>
+
+            <div class="product-buttons">
+                <a href="#" class="btn-outline">Подробнее</a>
+                <a href="#" class="btn-dark">В корзину</a>
+            </div>
+        </div>
+
+          <!-- Правая стрелка -->
+        <button class="popular-arrow right-arrow">
+            <img src="image/right.png" alt="">
+        </button>
+
+    </div>
+</section>
+
+ <!-- Раздел "Вы ищете что-то конкретное?" -->
+<section class="search-info">
+    <div class="search-info__container">
+
+        <h2 class="search-info__title">ВЫ ИЩЕТЕ ЧТО-ТО КОНКРЕТНОЕ?</h2>
+
+        <p class="search-info__text">
+            Проект <span class="black-text">Fotoprokat24</span> является агрегатором предложений всех фотопрокатов Москвы и служит для Вашего удобства.
+            Выберите необходимую категорию, либо начните поиск по названию. Оформив заказ, Вы сможете забрать его из
+            Пункта Выдачи, либо заказать доставку в любую точку Москвы.
+        </p>
+
+       
+
+        <div class="search-info__actions">
+            <a href="#" class="search-info__btn">ПЕРЕЙТИ В КАТАЛОГ</a>
+
+           <div class="search-info__search-wrapper">
+             <div class="search-info__search">
+                <input type="text" placeholder="Поиск">
+            </div>
+                <span class="search-clear"></span>
+        </div>
+            <a href="#" class="search-mobile-btn">ПРИСТУПИТЬ К ПОИСКУ</a>
+        </div>
+       
+
+    </div>
+
+    <div class="categories-grid">
+
+    <div class="category-card" style="background-image: url('image/photo-7.png');">
+        <div class="category-text">Фотоаппараты Canon<br><span>от 3000 рублей</span></div>
+    </div>
+
+    <div class="category-card" style="background-image: url('image/photo-6.png');">
+        <div class="category-text">Видеокамеры<br><span>по 200 рублей в сутки</span></div>
+    </div>
+
+    <div class="category-card" style="background-image: url('image/photo-5.png');">
+        <div class="category-text">Товар недели<br><span>всего за 4000 рублей</span></div>
+    </div>
+
+    <div class="category-card" style="background-image: url('image/photo-4.png');">
+        <div class="category-text">Лучшие объективы<br><span>по 700 рублей</span></div>
+    </div>
+
+    <div class="category-card" style="background-image: url('image/photo-3.png');">
+        <div class="category-text">Отличные фотоаппараты<br><span>за 1500 рублей</span></div>
+    </div>
+
+</div>
+
+</section>
+
+ <!-- Раздел "Зарабатывайте вместе с нами" -->
+<section class="how-it-works py-5 d-none d-sm-block">
+    <div class="how-container">
+
+        <h2 class="how-title">ЗАРАБАТЫВАЙТЕ ВМЕСТЕ С НАМИ</h2>
+
+        <p class="how-subtitle">
+            Сдавайте свою технику через наш сервис, разместив её в каталоге, и получайте стабильную прибыль.
+        </p>
+
+        <div class="how-steps">
+
+            <div class="how-step">
+                <p>Доступный способ инвестировать</p>
+                <div class="how-icon">
+                    <img src="image/diamond.svg" alt="">
+                </div>
+            </div>
+
+            <div class="how-step">
+                <p>Постоянный стабильный доход</p>
+                <div class="how-icon">
+                    <img src="image/calendar-6.svg" alt="">
+                </div>
+            </div>
+
+            <div class="how-step">
+                <p>Гарантии сохранности техники</p>
+                <div class="how-icon">
+                    <img src="image/umbrella.svg" alt="">
+                </div>
+            </div>
+
+            <div class="how-step">
+                <p>Прозрачные выплаты</p>
+                <div class="how-icon">
+                    <img src="image/view.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- КНОПКА  -->
+        <a href="#" class="how-btn">ПРЕДЛОЖИТЬ СВОЮ ТЕХНИКУ</a>
+
+    </div>
+</section>
+
+
+ <!-- Новости компании -->
+<section class="news py-5 bg-white d-none d-sm-block">
+    <div class="news-container">
+
+        <h2 class="news-title">НОВОСТИ КОМПАНИИ</h2>
+
+        <div class="news-grid">
+
+            <div class="news-card">
+                <img src="image/photo-2.png" alt="" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">7 апреля 2019</span>
+                    <h3 class="news-card-title">Выбираем SD-карты для съемки</h3>
+                    <p class="news-text">
+                        За исключением отсутствующей системы аэродинамического охлаждения, корпус этого ноутбука почти такой же.
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="image/photo-1.png" alt="" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">20 мая 2019</span>
+                    <h3 class="news-card-title">Что представила Photokina</h3>
+                    <p class="news-text">
+                        Ноутбук Zephyrus S (GX502) весит 2 кг, а корпус толщиной всего 18,9 мм позволяет легко уместить его в обычный рюкзак.
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="image/photo.png" alt="" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">14 июня 2019</span>
+                    <h3 class="news-card-title">Новинка goPro Hero 5</h3>
+                    <p class="news-text">
+                        Специальные «легкие» версии приложений для Android GO и отсутствие некоторых предустановленных программ.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="news-btn">ВСЕ НОВОСТИ</a>
+
+    </div>
+</section>
+
+
+ <!-- Раздел "С кем мы работаем?" -->
+<section class="partners py-5 bg-light-section d-none d-sm-block">
+    <div class="partners-bg">
+
+        <h2 class="partners-title">С КЕМ МЫ РАБОТАЕМ</h2>
+
+        <div class="partners-grid">
+
+            <div class="partner-card">
+                <img src="image/photograph.svg" class="partner-icon" alt="">
+                <div class="partner-info">
+                    <h3>Фотопрокат Zoom</h3>
+                    <p class="partner-address">Малая Ордынка, 25</p>
+                    <a href="http://zoom-prokat.ru" class="partner-link">zoom-prokat.ru</a>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <img src="image/photograph.svg" class="partner-icon" alt="">
+                <div class="partner-info">
+                    <h3>Rental Photo</h3>
+                    <p class="partner-address">Киркорова, 180/1</p>
+                    <a href="http://rentalphoto.com" class="partner-link">rentalphoto.com</a>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <img src="image/photograph.svg" class="partner-icon" alt="">
+                <div class="partner-info">
+                    <h3>Panasonic Company</h3>
+                    <p class="partner-address">Малая Ордынка, 25</p>
+                    <a href="http://zoom-prokat.ru" class="partner-link">zoom-prokat.ru</a>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <img src="image/photograph.svg" class="partner-icon" alt="">
+                <div class="partner-info">
+                    <h3>Торговый Центр</h3>
+                    <p class="partner-address">Киркорова, 180/1</p>
+                    <a href="http://rentalphoto.com" class="partner-link">rentalphoto.com</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+ <!-- Подпишись -->
+<section class="subscribe-section d-none d-sm-block">
+    <div class="subscribe-wrapper">
+
+        <!-- Левый блок -->
+        <div class="subscribe-left">
+            <div class="sub-icon-wrap">
+                <img src="image/letter.svg" alt="" class="sub-icon">
+            </div>
+
+            <div class="sub-text">
+                <span class="sub-green">Подпишитесь</span><br>
+                <span class="sub-white">на новости и акции</span>
+            </div>
+        </div>
+
+        <!-- Центр -->
+        <div class="subscribe-center">
+            <input type="email" placeholder="Введите e-mail" class="sub-input">
+            <button class="sub-btn">ПОДПИСАТЬСЯ</button>
+        </div>
+
+        <!-- Правый блок -->
+        <div class="subscribe-right">
+            <div class="sub-icon-wrap">
+                <img src="image/phone-call.png" alt="" class="sub-icon">
+            </div>
+
+            <div class="sub-text">
+                <span class="sub-green">Заказать звонок</span><br>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer py-5 bg-footer-grey d-none d-sm-block">
+    <div class="footer-wrapper">
+        <div class="footer-col footer-info">
+           <div class="footer-logo">
+                <img src="image/logo.png" class="logo-desktop" alt="fotoprokat24">
+            </div>
+            <p class="footer-text">Самый удобный в Москве сервис аренды фото, видео и кинотехники</p>
+        </div>
+
+        <div class="footer-col footer-social">
+            <a href="#" class="social-link"><img src="image/facebook.svg" alt="Facebook"></a>
+            <a href="#" class="social-link"><img src="image/twitter.svg" alt="Twitter"></a>
+            <a href="#" class="social-link"><img src="image/vk.svg" alt="VK"></a>
+            <a href="#" class="social-link"><img src="image/youtube.svg" alt="YouTube"></a>
+            <a href="#" class="social-link"><img src="image/instagram.svg" alt="Instagram"></a>
+        </div>
+
+        <div class="footer-col footer-contacts">
+            <a href="tel:+74951703918" class="footer-phone">+7 495 170-39-18</a>
+            <address class="footer-address">г. Москва, Проспект мира, дом 12</address>
+        </div>
+
+        <div class="footer-col footer-payments">
+            <img src="image/visa.svg" alt="Visa">
+            <img src="image/mastercard.svg" alt="Mastercard">
+            <img src="image/robokassa.svg" alt="Robokassa" class="pay-robo">
+        </div>
+
+        <div class="footer-bottom-left">
+            <span class="footer-copy">© 2015 – 2019 Fotoprokat 24</span>
+        </div>
+        <div class="footer-bottom-right">
+            <a href="#" class="footer-policy">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

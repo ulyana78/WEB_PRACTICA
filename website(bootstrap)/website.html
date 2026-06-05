@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoprokat 24</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <!-- Шапка-->  
+ <header class="navbar navbar-light bg-white border-bottom py-3 position-relative">
+    <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+        
+        <div class="d-none d-sm-flex align-items-center">
+            <button class="btn p-0 border-0 me-3 header-burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <img src="image/menu.svg" alt="Меню">
+            </button>
+        </div>
+
+        <a class="navbar-brand me-auto me-sm-0 header-logo-container" href="#">
+            <img src="image/logo.png" alt="Логотип" class="header-logo-img">
+            <img src="image/logoPhone.png" class="header-logo-img-logoPhone" alt="Логотип мобильный">
+        </a>
+
+        <div class="d-flex align-items-center order-0 order-sm-1 ms-sm-auto">
+            <div class="text-end me-4 d-none d-md-block">
+               <span class="text-dark fw-bold fs-9 d-block lh-sm">+7 495 170-39-18</span>
+                <small class="text-muted fs-7">Круглосуточно</small>
+            </div>
+
+            <div class="d-flex align-items-center me-0 me-sm-2">
+                <button class="btn p-2 position-relative border-0 img-badge-container">
+                    <img src="image/star.svg" alt="Избранное" class="icon-img">
+                    <img src="image/number5.png" alt="5" class="position-absolute badge-img">
+                </button>
+
+                <button class="btn p-2 position-relative border-0 img-badge-container">
+                    <img src="image/compareBlack.svg" alt="Сравнение" class="icon-img">
+                    <img src="image/number7.png" alt="5" class="position-absolute badge-img">
+                </button>
+
+                <button class="btn p-2 position-relative border-0 img-badge-container me-0 me-sm-2">
+                    <img src="image/shopping-cart.svg" alt="Корзина" class="icon-img">
+                    <img src="image/number2.png" alt="5" class="position-absolute badge-img">
+                </button>
+
+                <div class="vr-line d-none d-sm-block"></div>
+            </div>
+
+            <button class="btn p-2 border-0 d-none d-sm-block">
+                <img src="image/search.svg" alt="Поиск" class="icon-img">
+            </button>
+
+            <div class="vr-line ms-2 me-2 d-none d-sm-block"></div>
+
+            <button class="btn p-2 border-0 d-none d-sm-block">
+                <img src="image/user (1).svg" alt="Профиль" class="icon-img">
+            </button>
+        </div>
+
+        <div class="d-flex d-sm-none align-items-center order-1 mobile-right-group">
+            <button class="btn p-2 border-0">
+                <img src="image/search.svg" alt="Поиск" class="icon-img">
+            </button>
+
+            <button class="btn p-2 border-0">
+                <img src="image/locked.svg" alt="Вход" class="icon-img">
+            </button>
+
+            <button class="btn p-0 border-0 ms-2 header-burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <img src="image/menu.svg" alt="Меню">
+            </button>
+        </div>
+
+    </div>
+</header>
+
+  <!-- Всплывающее меню-->    
+<div class="offcanvas offcanvas-top custom-menu-panel" id="offcanvasMenu" tabindex="-1">
+    <div class="container-fluid px-3 py-3">
+        <div class="row g-0">
+            
+            <div class="col-6 border-end menu-left-col">
+                <ul class="list-unstyled mb-0">
+                    <li class="menu-title fw-bold text-dark position-relative ps-3 mb-1">Каталог</li>
+                    
+                    <li><a href="#" class="menu-item text-decoration-none">Камеры</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Оптика</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Операторское оборудование</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Свет</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Звуковое оборудование</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Для трансляций</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Специальное оборудование</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none mb-2">Аксессуары</a></li>
+                    
+                    <li class="menu-title fw-bold text-dark position-relative ps-3">Новинки в прокате</li>
+                </ul>
+            </div>
+
+            <div class="col-6 ps-3">
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="menu-item text-decoration-none">Как это работает</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Правила аренды</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Доставка и оплата</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Вопросы и ответы</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">О компании</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Новости</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Сотрудничество</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Договор оферты</a></li>
+                    <li><a href="#" class="menu-item text-decoration-none">Контакты</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+  <!-- Главный экран-->    
+<section class="hero position-relative d-flex align-items-end pb-5">
+    <div class="container-fluid px-4">
+        
+        <div class="hero-title position-relative d-inline-flex flex-column align-items-start z-2">
+            
+            <div class="hero-circle position-absolute rounded-circle"></div> 
+
+            <div class="bg-white px-3 py-2 fw-bold fs-2 text-dark lh-1 mb-1 shadow-sm position-relative z-3">
+                <span class="hero-word-gradient">АРЕНДА</span> ФОТО
+            </div>
+            
+            <div class="bg-white px-3 py-2 fw-bold fs-2 text-dark lh-1 mb-1 shadow-sm position-relative z-3">
+                И ВИДЕО
+            </div>
+            
+            <div class="bg-white px-3 py-2 fw-bold fs-2 text-dark lh-1 shadow-sm position-relative z-3">
+                ОБОРУДОВАНИЯ
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+  <!-- Преимущества--> 
+<section class="features py-4">
+    <div class="container-fluid px-4">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 justify-content-center">
+
+            <div class="col">
+                <div class="feature-item d-flex align-items-center bg-transparent">
+                    <img src="image/listr.svg" alt="" class="feature-icon flex-shrink-0">
+                    <p class="mb-0 ms-3 feature-text">Самый большой выбор техники</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="feature-item d-flex align-items-center bg-transparent">
+                    <img src="image/timer.svg" alt="" class="feature-icon flex-shrink-0">
+                    <p class="mb-0 ms-3 feature-text">Быстрое оформление заказа</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="feature-item d-flex align-items-center bg-transparent">
+                    <img src="image/placeholderr.svg" alt="" class="feature-icon flex-shrink-0">
+                    <p class="mb-0 ms-3 feature-text">Можно забрать заказ в пункте выдачи</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="feature-item d-flex align-items-center bg-transparent">
+                    <img src="image/productr.svg" alt="" class="feature-icon flex-shrink-0">
+                    <p class="mb-0 ms-3 feature-text">Доставка в любую точку Москвы</p>
+                </div>
+            </div>
+
+            <div class="col w-100-mobile">
+                <div class="feature-item d-flex align-items-center bg-transparent">
+                    <img src="image/money.svg" alt="" class="feature-icon flex-shrink-0">
+                    <p class="mb-0 ms-3 feature-text">Оплата картой и наличными</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Карточка товара--> 
+<section class="popular py-5 position-relative">
+    <div class="container-fluid px-4 position-relative">
+        
+        <h2 class="text-center fw-bold fs-4 mb-4 popular-title text-uppercase">Популярные товары</h2>
+
+        <button class="btn popular-arrow left-arrow d-none d-md-flex position-absolute start-0" type="button">
+            <img src="image/left.png" alt="Назад">
+        </button>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center">
+
+            <div class="col">
+                <div class="card h-100 product-card border-light-subtle rounded-0 p-4 text-center position-relative">
+                    <div class="product-icons position-absolute top-0 end-0 p-3 d-flex flex-column gap-2">
+                        <button class="btn p-1 border-0"><img src="image/compareBlack.svg" alt="Сравнить" class="icon-action"></button>
+                        <button class="btn p-1 border-0"><img src="image/star.svg" alt="В избранное" class="icon-action"></button>
+                    </div>
+                    <div class="my-3 img-container d-flex align-items-center justify-content-center">
+                        <img src="image/camera1.png" alt="PowerShot SX620 HS" class="product-img img-fluid">
+                    </div>
+                    <h3 class="fs-5 fw-bold text-dark mb-1 product-name">PowerShot SX620 HS</h3>
+                    <div class="text-muted small mb-4 product-brand">Canon</div>
+                    <div class="row g-0 border-top border-bottom py-2 mb-4 product-prices">
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">630 ₽</div><div class="text-muted fs-7">Будний</div></div>
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">750 ₽</div><div class="text-muted fs-7">Выходной</div></div>
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">4 380 ₽</div><div class="text-muted fs-7">Неделя</div></div>
+                        <div class="col-3"><div class="fw-bold fs-6 text-dark text-nowrap">12 250 ₽</div><div class="text-muted fs-7">Месяц</div></div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                        <a href="#" class="btn btn-white btn-custom-outline rounded-pill px-4 py-2 fw-bold text-nowrap">Подробнее</a>
+                        <a href="#" class="btn btn-custom-dark rounded-pill px-4 py-2 fw-bold text-white text-nowrap d-inline-flex align-items-center justify-content-center">
+                            <img src="image/cart.svg" alt="" class="btn-cart-icon me-2">
+                            В корзину
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 product-card border-light-subtle rounded-0 p-4 text-center position-relative">
+                    <div class="product-icons position-absolute top-0 end-0 p-3 d-flex flex-column gap-2">
+                        <button class="btn p-1 border-0"><img src="image/compareBlack.svg" alt="Сравнить" class="icon-action"></button>
+                        <button class="btn p-1 border-0"><img src="image/star.svg" alt="В избранное" class="icon-action"></button>
+                    </div>
+                    <div class="my-3 img-container d-flex align-items-center justify-content-center">
+                        <img src="image/camera2.png" alt="Sony CyberShot DSC-HX60" class="product-img img-fluid">
+                    </div>
+                    <h3 class="fs-5 fw-bold text-dark mb-1 product-name">PowerShot SX620 HS</h3>
+                    <div class="text-muted small mb-4 product-brand">Sony</div>
+                    <div class="row g-0 border-top border-bottom py-2 mb-4 product-prices">
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">630 ₽</div><div class="text-muted fs-7">Будний</div></div>
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">750 ₽</div><div class="text-muted fs-7">Выходной</div></div>
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">4 380 ₽</div><div class="text-muted fs-7">Неделя</div></div>
+                        <div class="col-3"><div class="fw-bold fs-6 text-dark text-nowrap">12 250 ₽</div><div class="text-muted fs-7">Месяц</div></div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                        <a href="#" class="btn btn-white btn-custom-outline rounded-pill px-4 py-2 fw-bold text-nowrap">Подробнее</a>
+                        <a href="#" class="btn btn-custom-dark rounded-pill px-4 py-2 fw-bold text-white text-nowrap d-inline-flex align-items-center justify-content-center">
+                            <img src="image/cart.svg" alt="" class="btn-cart-icon me-2">
+                            В корзину
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-none d-md-block d-lg-block">
+                <div class="card h-100 product-card border-light-subtle rounded-0 p-4 text-center position-relative">
+                    <div class="product-icons position-absolute top-0 end-0 p-3 d-flex flex-column gap-2">
+                        <button class="btn p-1 border-0"><img src="image/compareBlack.svg" alt="Сравнить" class="icon-action"></button>
+                        <button class="btn p-1 border-0"><img src="image/star.svg" alt="В избранное" class="icon-action"></button>
+                    </div>
+                    <div class="my-3 img-container d-flex align-items-center justify-content-center">
+                        <img src="image/camera3.png" alt="Canon PowerShot SX620 HS" class="product-img img-fluid">
+                    </div>
+                    <h3 class="fs-5 fw-bold text-dark mb-1 product-name">PowerShot SX620 HS</h3>
+                    <div class="text-muted small mb-4 product-brand">Canon</div>
+                    <div class="row g-0 border-top border-bottom py-2 mb-4 product-prices">
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">630 ₽</div><div class="text-muted fs-7">Будний</div></div>
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">750 ₽</div><div class="text-muted fs-7">Выходной</div></div>
+                        <div class="col-3 border-end"><div class="fw-bold fs-6 text-dark text-nowrap">4 380 ₽</div><div class="text-muted fs-7">Неделя</div></div>
+                        <div class="col-3"><div class="fw-bold fs-6 text-dark text-nowrap">12 250 ₽</div><div class="text-muted fs-7">Месяц</div></div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                        <a href="#" class="btn btn-white btn-custom-outline rounded-pill px-4 py-2 fw-bold text-nowrap">Подробнее</a>
+                        <a href="#" class="btn btn-custom-dark rounded-pill px-4 py-2 fw-bold text-white text-nowrap d-inline-flex align-items-center justify-content-center">
+                            <img src="image/cart.svg" alt="" class="btn-cart-icon me-2">
+                            В корзину
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn popular-arrow right-arrow d-none d-md-flex position-absolute end-0" type="button">
+            <img src="image/right.png" alt="Вперед">
+        </button>
+
+    </div>
+</section>
+
+
+<!-- Раздел "Вы ищете что-то конкретное?"--> 
+<section class="search-info py-5 bg-white">
+    <div class="container-fluid px-0 text-center search-info-container">
+
+        <div class="mx-auto px-4 search-text-block">
+            <h2 class="fw-bold fs-4 mb-3 search-info-title text-uppercase">Вы ищете что-то конкретное?</h2>
+
+            <p class="text-muted fs-6 mb-4 mx-auto search-info-text">
+                Проект <span class="text-dark fw-bold">Fotoprokat24</span> является агрегатором предложений всех фотопрокатов Москвы и служит для Вашего удобства.
+                Выберите необходимую категорию, либо начните поиск по названию. Оформив заказ, Вы сможете забрать его из
+                Пункта Выдачи, либо заказать доставку в любую точку Москвы.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 mb-5 search-info-actions">
+                
+                <a href="#" class="btn btn-custom-green rounded-pill fw-bold text-white text-uppercase text-nowrap search-info-btn">
+                    Перейти в каталог
+                </a>
+
+                <div class="position-relative d-none d-sm-block search-input-group">
+                    <input type="text" placeholder="Поиск" class="form-control rounded-pill border-4 border-white bg-light-gray px-4 py-2 search-info-input">
+                    <span class="position-absolute end-0 top-50 translate-middle-y me-3 search-icon"></span>
+                </div>
+
+                <button type="button" class="btn p-0 border-0 d-none d-sm-inline-block search-clear" aria-label="Очистить"></button>
+
+                <a href="#" class="btn btn-white rounded-pill fw-bold text-dark d-sm-none text-uppercase search-mobile-btn">
+                    Приступить к поиску
+                </a>
+            </div>
+        </div>
+
+        <div class="categories-grid">
+
+            <div class="category-card" style="background-image: url('image/photo-7.png');">
+                <div class="category-text text-start">Фотоаппараты Canon<br><span>от 3000 рублей</span></div>
+            </div>
+
+            <div class="category-card" style="background-image: url('image/photo-6.png');">
+                <div class="category-text text-start bg-secondary-gray text-white">Видеокамеры<br><span>по 200 рублей в сутки</span></div>
+            </div>
+
+            <div class="category-card" style="background-image: url('image/photo-5.png');">
+                <div class="category-text text-start">Товар недели<br><span>всего за 4000 рублей</span></div>
+            </div>
+
+            <div class="category-card" style="background-image: url('image/photo-4.png');">
+                <div class="category-text text-start">Лучшие объективы<br><span>по 700 рублей</span></div>
+            </div>
+
+            <div class="category-card" style="background-image: url('image/photo-3.png');">
+                <div class="category-text text-start">Отличные фотоаппараты<br><span>за 1500 рублей</span></div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Раздел "Зарабатывайте вместе с нами"--> 
+<section class="how-it-works py-5 bg-light-section">
+    <div class="container text-center px-4 how-container">
+
+        <h2 class="fw-bold fs-4 mb-3 how-title text-uppercase">Зарабатывайте вместе с нами</h2>
+
+        <p class="text-muted fs-6 mb-5 mx-auto how-subtitle">
+            Сдавайте свою технику через наш сервис, разместив её в каталоге, и получайте стабильную прибыль.
+        </p>
+
+        <div class="row g-4 justify-content-center mb-5 how-steps">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 rounded-0 p-4 shadow-sm text-start position-relative how-step">
+                    <p class="mb-0 fw-medium text-dark how-step-text">Доступный способ инвестировать</p>
+                    <div class="position-absolute bottom-0 end-0 p-3 how-icon">
+                        <img src="image/diamond.svg" alt="Инвестиции" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 rounded-0 p-4 shadow-sm text-start position-relative how-step">
+                    <p class="mb-0 fw-medium text-dark how-step-text">Постоянный стабильный доход</p>
+                    <div class="position-absolute bottom-0 end-0 p-3 how-icon">
+                        <img src="image/calendar-6.svg" alt="Доход" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 rounded-0 p-4 shadow-sm text-start position-relative how-step">
+                    <p class="mb-0 fw-medium text-dark how-step-text">Гарантии сохранности техники</p>
+                    <div class="position-absolute bottom-0 end-0 p-3 how-icon">
+                        <img src="image/umbrella.svg" alt="Гарантии" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 rounded-0 p-4 shadow-sm text-start position-relative how-step">
+                    <p class="mb-0 fw-medium text-dark how-step-text">Прозрачные выплаты</p>
+                    <div class="position-absolute bottom-0 end-0 p-3 how-icon">
+                        <img src="image/view.svg" alt="Выплаты" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="btn btn-custom-green rounded-pill fw-bold text-white text-uppercase text-nowrap how-btn">
+            Предложить свою технику
+        </a>
+
+    </div>
+</section>
+
+
+
+<!-- Раздел "Новости компании"--> 
+<section class="news py-5 bg-white">
+    <div class="container text-center px-4 news-container">
+
+        <h2 class="fw-bold fs-4 mb-4 text-uppercase news-title">Новости компании</h2>
+
+        <div class="row g-4 justify-content-center mb-4 text-start">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-light-subtle rounded-0 p-0 news-card">
+                    <img src="image/photo-2.png" alt="Выбираем SD-карты" class="card-img-top rounded-0 news-img">
+                    <div class="card-body p-4 news-content">
+                        <span class="news-date d-block mb-2">7 апреля 2019</span>
+                        <h3 class="fw-bold fs-5 mb-2 news-card-title">Выбираем SD-карты для съемки</h3>
+                        <p class="card-text text-muted news-text">
+                            За исключением отсутствующей системы аэродинамического охлаждения, корпус этого ноутбука почти такой же.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-light-subtle rounded-0 p-0 news-card">
+                    <img src="image/photo-1.png" alt="Photokina" class="card-img-top rounded-0 news-img">
+                    <div class="card-body p-4 news-content">
+                        <span class="news-date d-block mb-2">20 мая 2019</span>
+                        <h3 class="fw-bold fs-5 mb-2 news-card-title">Что представила Photokina</h3>
+                        <p class="card-text text-muted news-text">
+                            Ноутбук Zephyrus S (GX502) весит 2 кг, а корпус толщиной всего 18,9 мм позволяет легко уместить его в обычный рюкзак.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 d-block d-md-none d-lg-block">
+                <div class="card h-100 border-light-subtle rounded-0 p-0 news-card">
+                    <img src="image/photo.png" alt="GoPro Hero 5" class="card-img-top rounded-0 news-img">
+                    <div class="card-body p-4 news-content">
+                        <span class="news-date d-block mb-2">14 июня 2019</span>
+                        <h3 class="fw-bold fs-5 mb-2 news-card-title">Новинка goPro Hero 5</h3>
+                        <p class="card-text text-muted news-text">
+                            Специальные «легкие» версии приложений для Android GO и отсутствие некоторых предустановленных программ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="btn btn-custom-green rounded-pill fw-bold text-white text-uppercase text-nowrap news-btn">
+            Все новости
+        </a>
+
+    </div>
+</section>
+
+<!-- Раздел "С кем мы работаем"--> 
+<section class="partners bg-light-section">
+    <div class="container-fluid px-1">
+        <div class="partners-bg py-5 px-3 px-md-4 rounded-3 text-center">
+
+            <h2 class="fw-bold fs-5 mb-4 text-uppercase partners-title">С кем мы работаем</h2>
+
+            <div class="row g-4 justify-content-center text-start partners-grid">
+
+                <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+                    <div class="card h-100 border-0 rounded-0 p-4 shadow-sm w-100 partner-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="image/photograph.svg" class="flex-shrink-0 partner-icon" alt="Иконка фотоаппарата">
+                            <div class="partner-info">
+                                <h3 class="fw-bold fs-5 mb-1 text-dark">Фотопрокат Zoom</h3>
+                                <p class="mb-2 text-muted small partner-address">Малая Ордынка, 25</p>
+                                <a href="http://zoom-prokat.ru" class="small partner-link">http://zoom-prokat.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+                    <div class="card h-100 border-0 rounded-0 p-4 shadow-sm w-100 partner-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="image/photograph.svg" class="flex-shrink-0 partner-icon" alt="Иконка фотоаппарата">
+                            <div class="partner-info">
+                                <h3 class="fw-bold fs-5 mb-1 text-dark">Rental Photo</h3>
+                                <p class="mb-2 text-muted small partner-address">Киркорова, 180/1</p>
+                                <a href="http://rentalphoto.com" class="small partner-link">http://rentalphoto.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+                    <div class="card h-100 border-0 rounded-0 p-4 shadow-sm w-100 partner-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="image/photograph.svg" class="flex-shrink-0 partner-icon" alt="Иконка фотоаппарата">
+                            <div class="partner-info">
+                                <h3 class="fw-bold fs-5 mb-1 text-dark">Panasonic Company</h3>
+                                <p class="mb-2 text-muted small partner-address">Малая Ордынка, 25</p>
+                                <a href="http://zoom-prokat.ru" class="small partner-link">http://zoom-prokat.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+                    <div class="card h-100 border-0 rounded-0 p-4 shadow-sm w-100 partner-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="image/photograph.svg" class="flex-shrink-0 partner-icon" alt="Иконка фотоаппарата">
+                            <div class="partner-info">
+                                <h3 class="fw-bold fs-5 mb-1 text-dark">Торговый Центр</h3>
+                                <p class="mb-2 text-muted small partner-address">Киркорова, 180/1</p>
+                                <a href="http://rentalphoto.com" class="small partner-link">http://rentalphoto.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Раздел "Подпишись"--> 
+<section class="subscribe-section">
+    <div class="container-fluid px-0">
+        <div class="subscribe-wrapper py-3 px- text-white">
+            <div class="container-xl">
+                <div class="row align-items-center justify-content-between g-4">
+                    
+                    <div class="col-1 col-md-auto d-flex align-items-center gap-3 justify-content-center justify-content-md-start order-md-1">
+                        <div class="flex-shrink-0 sub-icon-wrap">
+                            <img src="image/letter.svg" alt="Письмо" class="img-fluid sub-icon sub-icon-letter">
+                        </div>
+                        <div class="lh-sm text-center text-md-start sub-text">
+                            <span class="text-custom-green fw-bold d-block text-uppercas sub-green">Подпишитесь</span>
+                            <span class="fw-bold text-nowrap sub-white">на новости и акции</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-5 order-md-3 order-lg-2">
+                        <form action="#" class="input-group rounded-0 shadow-sm">
+                            <input type="email" class="form-control rounded-0 border-0 px-3 py-2 sub-input" placeholder="Введите e-mail" required>
+                            <button class="btn btn-submit rounded-0 border-0 px-4 text-uppercase fw-bold sub-btn" type="submit">подписаться</button>
+                        </form>
+                    </div>
+
+                    <div class="col-12 col-md-auto d-flex align-items-center gap-2 justify-content-center justify-content-md-end order-md-2 order-lg-3">
+                        <div class="flex-shrink-0 sub-icon-wrap">
+                            <img src="image/phone-call.png" alt="Телефон" class="img-fluid sub-icon sub-icon-phone">
+                        </div>
+                        <div class="sub-text">
+                            <a href="#" class="text-custom-green fw-bold text-decoration-none text-uppercas text-nowrap sub-link">Заказать звонок</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Подвал --> 
+<footer class="footer py-3 bg-footer-grey"> 
+    <div class="container-xl">
+        
+        
+        <div class="row align-items-start justify-content-between g-3 pb-2 border-bottom border-light-subtle">
+            
+           
+            <div class="col-12 col-md-4 col-lg-3 text-center text-md-start footer-brand">
+                <div class="footer-logo mb-2">
+                    <img src="image/logo.png" class="img-fluid logo-desktop" alt="fotoprokat24">
+                </div>
+                <p class="footer-text small text-dark mb-0" style="max-width: 250px;">Самый удобный в Москве сервис аренды фото, видео и кинотехники</p>
+            </div>
+
+            <!-- Блок с контактами  -->
+            <div class="col-12 col-md-4 col-lg-3 text-center text-md-start footer-contacts">
+                <span class="text-dark fw-bold fs-9 d-block lh-sm">+7 495 170-39-18</span>
+                <address class="small text-dark mb-0 footer-address">г. Москва, Проспект мира, дом 12</address>
+            </div>
+
+            <!-- Блок с соцсетями  -->
+            <div class="col-12 col-md-4 col-lg-3 d-flex justify-content-center justify-content-md-end justify-content-lg-center align-items-center footer-social">
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-link"><img src="image/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img src="image/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-link"><img src="image/vk.svg" alt="VK"></a>
+                    <a href="#" class="social-link"><img src="image/youtube.svg" alt="YouTube"></a>
+                    <a href="#" class="social-link"><img src="image/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <!-- Платежки-->
+            <div class="col-12 col-md-12 col-lg-3 d-flex justify-content-center justify-content-lg-end align-items-center footer-payments mt-md-2 mt-lg-0">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="image/visa.svg" alt="Visa" class="pay-visa">
+                    <img src="image/mastercard.svg" alt="Mastercard" class="pay-master">
+                    <img src="image/robokassa.svg" alt="Robokassa" class="pay-robo">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row pt-2 g-2 text-center text-md-start">
+            <div class="col-12 col-md-4 col-lg-6">
+                <span class="footer-copy text-muted small">© 2015 – 2019 Fotoprokat 24</span>
+            </div>
+           
+            <div class="col-12 col-md-8 col-lg-6 text-md-start text-lg-end">
+                <a href="#" class="footer-policy text-muted small text-decoration-none">Политика конфиденциальности</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

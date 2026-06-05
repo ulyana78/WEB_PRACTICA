@@ -1,0 +1,1581 @@
+/* Подключение шрифтов*/
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../font/Ubuntu-Regular.ttf") format("truetype");
+    font-weight: 400;
+   }
+
+@font-face {
+    font-family: "Ubuntu_bold";
+    src: url("../font/Ubuntu-Bold.ttf") format("truetype");
+    font-weight: 700;
+    }
+
+body {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    background: #fff;
+}
+
+
+/* Шапка (flex)*/
+.header {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+}
+
+.header__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Левая часть */
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Мобильный бургер скрыт по умолчанию */
+.mobile-burger {
+    display: none;
+}
+
+/* Логотип */
+.header__logo img {
+    height: 28px;
+    width: auto;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+/* Логотип слева на десктопе */
+.header__logo {
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+/* Правая часть */
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__divider {
+    width: 1px;
+    height: 28px;
+    background: #dcdcdc;
+}
+
+.header__phone {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.phone-number {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.phone-sub {
+    font-size: 12px;
+    color: #777;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Мобильные иконки слева */
+.header__mobile-left {
+    display: none;
+}
+
+.icon-lock {
+    display: none;
+}
+
+/* Адаптив */
+@media (max-width: 992px) {
+    .header__phone {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+
+     .header__divider {
+        display: none;
+    }
+
+    /* Переключение логотипов */
+    .logo-desktop {
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
+    }
+
+    /* Мобильная сетка */
+    .header__inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    /* Мобильные иконки слева */
+    .header__mobile-left {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        grid-column: 1;
+    }
+
+    .header__left {
+        display: none;
+    }
+
+    /* Логотип по центру */
+    .header__logo {
+        grid-column: 2;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    /* Правая часть */
+    .header__right {
+        grid-column: 3;
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+    /* Скрываем десктопные иконки справа */
+    .header__icons {
+        display: none;
+    }
+
+    .icon-user {
+        display: none;
+    }
+    .icon-lock {
+        display: block;
+        width: 20px;
+    }
+
+    /* Мобильный бургер справа */
+    .mobile-burger {
+        display: block;
+    }
+
+    /* Уменьшаем иконки */
+    .header__right img {
+        width: 20px;
+    }
+}
+
+
+
+/* Главный экран (flex)*/
+.hero {
+    height: 600px;
+    background: url("../image/header.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/* Текстовый блок */
+.hero-title {
+    position: relative; /* кружок будет привязан сюда */
+    z-index: 2; /* текст выше кружка */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 70px;
+}
+
+/* Фон текста */
+.hero-line {
+    background: #ffffff;
+    padding: 8px 18px;
+    font-family: "Ubuntu_bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    display: inline-block;
+    position: relative;
+    z-index: 3; 
+}
+
+/* Градиентное слово */
+.hero-word-gradient {
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Кружок */
+.hero-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    border-radius: 50%;
+    top: 114px;
+    left: -24px;
+    z-index: 1; /* ← ниже текста, выше фона */
+}
+
+/* Планшет */
+@media (max-width: 992px) {
+    .hero {
+        height: 500px;
+        background: url("../image/headerTablet.png") top center/cover no-repeat;
+    }
+
+    .hero-title {
+        margin-left: 40px;
+    }
+
+    .hero-line {
+        font-size: 26px;
+        padding: 7px 16px;
+    }
+
+    .hero-circle {
+        top: 96px;
+        left: -24px;
+    }
+}
+
+/* Мобильный */
+@media (max-width: 576px) {
+    .hero {
+        height: 420px;
+        background: url("../image/headerPhone.png") top center/cover no-repeat;
+    }
+
+    .hero-title {
+        margin-left: 20px;
+    }
+
+    .hero-line {
+        font-size: 22px;
+        padding: 6px 14px;
+    }
+
+    .hero-circle {
+        width: 35px;
+        height: 35px;
+        top: 84px;
+        left: -17px;
+    }
+}
+
+
+/* Преимущества*/
+.features {
+    padding: 30px 0;
+    background: #F5F5F5;
+}
+
+.features__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Десктоп: 5 в ряд */
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .feature-item {
+        grid-area: unset !important;
+    }
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  
+    border-radius: 10px;
+    padding: 16px 14px;
+
+    min-width: 0;
+}
+
+.feature-item img {
+    width: 32px;
+    height: 32px;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.3;
+}
+
+/* Планшетная версия*/
+@media (max-width: 992px) {
+    .features__inner {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "f1 f2 f3"
+            "f4 f5 .";
+    }
+
+    .feature-item:nth-child(1) { grid-area: f1; }
+    .feature-item:nth-child(2) { grid-area: f2; }
+    .feature-item:nth-child(3) { grid-area: f3; }
+    .feature-item:nth-child(4) { grid-area: f4; }
+    .feature-item:nth-child(5) { grid-area: f5; }
+}
+
+/* Мобильная версия*/
+@media (max-width: 576px) {
+    .features__inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: none;
+    }
+
+    .feature-item {
+        min-width: 0;
+        flex-wrap: wrap;
+        grid-area: unset !important; 
+    }
+
+    .feature-item:last-child {
+        grid-column: 1 / -1;
+    }
+
+ /* фон секции — белый */
+    .features {
+        background: #ffffff;
+    }
+
+    /* сетка 2 в ряд */
+    .features__inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        grid-template-areas: none;
+    }
+
+    /* карточки */
+    .feature-item {
+        background: #F5F5F5;
+        border-radius: 0px;
+
+        display: flex;
+        flex-direction: column; /* вертикально */
+        justify-content: center;
+        align-items: center;
+
+        padding: 40px;
+        height: 80px; /* квадратная форма */
+        text-align: center;
+
+        flex-wrap: nowrap;
+        grid-area: unset !important;
+    }
+
+    /* иконка по центру, чуть больше */
+    .feature-item img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    /* текст по центру */
+    .feature-item p {
+        font-size: 14px;
+        line-height: 1.25;
+        margin: 0;
+    }
+
+    /* последний — на всю ширину */
+    .feature-item:last-child {
+        grid-column: 1 / -1;
+        height: 140px;
+    }
+}
+
+
+
+/* Раздел "Популярные товары" (grid) */
+.popular {
+    padding: 10px 0;
+}
+
+.popular__title {
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "Ubuntu_bold", sans-serif;
+}
+
+.popular__grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Карточка товара */
+.product-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 25px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.product-img {
+    width: 65%;
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    font-family: "Ubuntu_bold", sans-serif;
+}
+
+.product-brand {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+/* Цены */
+.product-prices {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.price-value {
+    font-family: "Ubuntu_bold", sans-serif;
+    font-size: 16px;
+}
+
+.price-label {
+    font-size: 14px;
+    color: #75758A;
+}
+
+/* Кнопки */
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-outline,
+.btn-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: "Ubuntu_bold", sans-serif;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-outline {
+    background: #ffffff;
+    color: #000000;
+    border: none; /* убрали рамку */
+    border-radius: 24px; /* скруглённые углы */
+
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: "Ubuntu_bold", sans-serif;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* мягкая тень */
+    transition: 0.2s;
+}
+
+.btn-outline:hover {
+  
+   background: #ffffff;
+   filter: brightness(0.95);
+}
+
+.btn-dark {
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    color: #ffffff;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); 
+    border: none;
+    position: relative;
+    padding-left: 36px;
+    border-radius: 24px; /* скруглённые углы */
+}
+
+/* Иконка корзины слева */
+.btn-dark::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../image/cart.svg"); /* белая корзина */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-dark:hover {
+    filter: brightness(1.11);
+}
+
+
+/* Адаптив карточек */
+@media (max-width: 992px) {
+    .popular__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+      .product-card:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .popular__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+     .popular__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* возвращаем третью карточку */
+    .product-card:nth-child(3) {
+        display: block;
+    }
+
+    /* скрываем стрелки */
+    .popular-arrow {
+        display: none !important;
+    }
+}
+
+/* Стрелки */
+.popular-slider-wrapper {
+    position: relative;
+}
+
+.popular-arrow {
+    position: absolute;
+    top: 34%;
+    transform: translateY(-50%);
+
+    width: 68px;
+    height: 68px;
+    background: #ffffff00;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: -7px; 
+}
+
+.right-arrow {
+    right: -7px; 
+}
+
+.popular-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* иконки на фото (правый верхний угол)*/
+.product-card {
+    position: relative;
+}
+
+.product-icons {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-icons img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* Раздел "Вы ищете что-то конкретное? */
+.search-info {
+    padding: 0px 0px 4px;
+    background: #ffffff;
+}
+
+.black-text {
+    color: #000000;
+}
+
+.search-info__container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.search-info__title {
+    font-size: 20px;
+    font-family: "Ubuntu_bold", sans-serif;
+    margin-bottom: 20px;
+}
+
+.search-info__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #75758A;
+    margin-bottom: 30px;
+
+    max-width: 650px;      
+    margin-left: auto;      
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Кнопка + поиск */
+.search-info__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Кнопка */
+.search-info__btn {
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    color: #ffffff;
+    box-shadow: 0 5px 8px rgba(23, 107, 1, 0.6); 
+    padding: 18px 64px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Ubuntu_bold", sans-serif;
+    border: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.search-info__btn:hover {
+    filter: brightness(1.11);
+}
+
+/* Общий контейнер для поля и крестика */
+.search-info__search-wrapper {
+    display: inline-flex;
+    align-items: center; 
+}
+
+/* Поиск */
+.search-info__search {
+    position: relative;
+}
+
+/* Поле ввода */
+.search-info__search input {
+    width: 240px;
+    padding: 12px 44px 12px 20px; 
+    
+    background: #F5F5F7;
+    color: #75758A;
+
+    border: 4px solid #ffffff;
+    border-radius: 24px;
+
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+
+    box-shadow:
+        inset 0 1px 3px rgba(0,0,0,0.08),
+        0 2px 6px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+/* Иконка "поиск"*/
+.search-info__search::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../image/search.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    right: 18px; 
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Иконка "закрытия"*/
+.search-clear {
+    display: inline-block;
+    margin-left: 16px; 
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../image/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    flex-shrink: 0; 
+}
+
+/* Кнопка для мобильной версии */
+.search-mobile-btn {
+    display: none; 
+}
+
+/* Сетка категорий */
+.category-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.category-text span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+.bg-secondary-gray {
+    background-color: #75758A !important;
+}
+
+.bg-secondary-gray span {
+    color: #E2E2E6 !important;
+}
+
+/* Desktop-версия*/
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    padding: 0 14px;
+    
+    margin: 60px auto 0;  
+    max-width: 960px;     
+}
+
+@media (min-width: 576px) {
+   
+    .category-card:nth-child(1),
+    .category-card:nth-child(2),
+    .category-card:nth-child(3),
+    .category-card:nth-child(5) { 
+        grid-column: span 1; 
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+    
+  
+    .category-card:nth-child(4) { 
+        grid-column: span 2; 
+        height: 100%;       
+        aspect-ratio: auto; 
+    } 
+}
+
+/* Планшетная версия*/
+@media (max-width: 991.98px) and (min-width: 576px) {
+    .categories-grid {
+        /* Две колонки, чтобы получить сетку 2х2 для квадратов */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-areas:
+            "c1 c2"   /* Первый ряд: 1 и 2 */
+            "c3 c5"   /* Второй ряд: 3 и 5 */
+            "c4 c4";  /* Третий ряд: 4-я карточка занимает обе колонки */
+        gap: 18px;
+        padding: 0 18px;
+        margin-top: 40px; 
+    }
+
+    /* Явно отменяем десктопные grid-column, чтобы grid-areas работали корректно */
+    .category-card { grid-column: auto !important; }
+
+    /* Привязываем элементы к сетке */
+    .category-card:nth-child(1) { grid-area: c1; }
+    .category-card:nth-child(2) { grid-area: c2; }
+    .category-card:nth-child(3) { grid-area: c3; }
+    .category-card:nth-child(4) { grid-area: c4; }
+    .category-card:nth-child(5) { grid-area: c5; }
+
+    /* Для 4-й карточки убираем высоту 100% (которая была на десктопе) 
+       и задаем фиксированную прямоугольную высоту для планшета */
+    .category-card:nth-child(4) {
+        height: 200px;       /* Высота прямоугольника снизу */
+        aspect-ratio: auto;  /* Отмена квадратных пропорций */
+    }
+    }
+
+    
+/* Мобильная версия*/
+@media (max-width: 575.98px) {
+    .search-info__actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-info__search input {
+        width: 100%;
+    }
+
+    /* скрываем поле ввода */
+    .search-info__search {
+        display: none;
+    }
+
+    /* белая кнопка */
+    .search-mobile-btn {
+        display: inline-block;
+        background: #ffffff;
+        color: #000000;
+        font-family: "Ubuntu_bold", sans-serif;
+        font-size: 14px;
+        padding: 18px 54px;
+        border-radius: 24px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+        text-decoration: none;
+        border: none;
+        transition: 0.2s;
+    }
+
+    .search-mobile-btn:hover {
+        filter: brightness(0.95);
+    }
+
+    .search-clear {
+        display: none;
+    }
+
+    .search-info-btn,
+    .search-mobile-btn {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr; 
+        max-width: 430px;
+        margin: 40px auto 0;
+        padding: 0 12px;
+        gap: 16px;
+    }
+
+    .category-card {
+        grid-column: span 1 !important;
+        grid-area: auto !important; 
+        aspect-ratio: 1 / 1; 
+        height: auto;
+    }
+}
+
+/* Раздел "Зарабатывайте вместе с нами" */
+.how-it-works {
+    padding: -10px 0;
+    background: #F5F5F5;
+}
+
+.how-container {
+    max-width: 1100px;
+    margin: 30px;
+    padding: 6px 25px 20px;
+    text-align: center;
+
+}
+
+.how-title {
+    font-size: 20px;
+    font-family: "Ubuntu_bold", sans-serif;
+    margin-bottom: 20px;
+}
+
+.how-subtitle {
+    max-width: 650px;
+    margin: 0 auto 60px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #75758A;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Сетка карточек */
+.how-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    border-radius: 0;
+}
+
+/* Карточка: убрали пробелы между текстом и иконкой */
+.how-step {
+    background: #ffffff;
+    border-radius: 0px;
+    padding: 30px 15px; 
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Текст внутри карточки */
+.how-step p {
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    color: #000;
+    line-height: 1.4;
+    margin: 0 0 15px 0; /* фиксированный маленький отступ до иконки */
+}
+
+/* Иконка */
+.how-icon img {
+    width: 42px;
+    height: 42px;
+    display: block;
+}
+
+/* Кнопка */
+.how-btn {
+    display: inline-block;
+    margin: 40px auto 0;
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    color: #ffffff;
+    box-shadow: 0 5px 8px rgba(23, 107, 1, 0.6); 
+    padding: 14px 40px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-family: "Ubuntu_bold", sans-serif;
+    text-decoration: none;
+    border: none;
+    transition: 0.2s;
+}
+
+.how-btn:hover {
+     filter: brightness(1.11);
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 992px) {
+    .how-steps {
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 12px; 
+    }
+
+    .how-step {
+        border-radius: 0;
+        padding: 20px 5px;
+    }
+
+    .how-step p {
+        font-size: 13px; 
+        margin-bottom: 10px;
+    }
+
+    .how-icon img {
+        width: 36px; 
+        height: 36px;
+    }
+}
+
+
+
+/* Раздел Новости */
+.news {
+    padding: 10px 0 23px;
+    background: #fff;
+}
+
+.news-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.news-title {
+    font-size: 18px;
+    font-family: "Ubuntu_bold", sans-serif;
+    margin-bottom: 11px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 1px;
+    overflow: hidden;
+  
+    text-align: left;
+    padding: 10px 0 0px;
+}
+
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    font-size: 14px;
+    color: #75758A;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-card-title {
+    font-size: 18px;
+    font-family: "Ubuntu_bold", sans-serif;
+    margin-bottom: 10px;
+}
+
+.news-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.news-btn {
+    display: block;
+    width: fit-content;
+    margin: 13px auto 0;
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    color: #ffffff;
+    box-shadow: 0 5px 8px rgba(23, 107, 1, 0.6);  
+    padding: 16px 40px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-family: "Ubuntu_bold", sans-serif;
+    text-decoration: none;
+    border: none;
+    transition: 0.2s;
+}
+
+.news-btn:hover {
+    filter: brightness(1.11);
+}
+
+/* Планшетная версия */
+@media (max-width: 992px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-grid .news-card:nth-child(3) {
+        display: none;
+    }
+}
+
+/* Адаптив для мобильных: возвращаем видимость третьей карточки и ставим их в один ряд */
+@media (max-width: 576px) {
+    .news-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .news-grid .news-card:nth-child(3) {
+        display: block;
+    }
+}
+
+
+
+/* Раздел "С кем мы работаем? */
+.partners {
+    padding: 0;
+    background: #f8f8f8;
+    padding-bottom: 0;
+}
+
+/* Фон-карта */
+.partners-bg {
+    background-image: url("../image/for map.png");
+    background-size: cover;
+    background-position: center;
+    padding: 6px 90px 50px 120px;
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+/* Заголовок */
+.partners-title {
+    font-size: 18px;
+    font-family: "Ubuntu_bold", sans-serif;
+    color: #000;
+    margin-bottom: 10px;
+  
+}
+
+/* Сетка карточек */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Карточка */
+.partner-card {
+    width: 240px;
+    background: #fff;
+    padding: 26px 16px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start; /* ← ВАЖНО: выравнивание по верхнему краю */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Иконка */
+.partner-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 2px; /* лёгкий подъём, чтобы совпасть с заголовком */
+}
+
+/* Текстовая часть */
+.partner-info {
+    display: block; /* обычный поток, без центрирования */
+}
+
+.partner-info h3 {
+    font-size: 18px;
+    font-family: "Ubuntu_bold", sans-serif;
+    margin-bottom: 5px;
+    margin-top: 0;
+    line-height: 1.1;
+}
+
+.partner-address {
+    font-size: 14px;
+    color: #75758A;
+    margin-bottom: 5px;
+}
+
+.partner-link {
+    font-size: 14px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.partner-link:hover {
+    text-decoration: underline;
+}
+
+/* Адаптив */
+@media (max-width: 992px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .partners-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Раздел подписки */
+.subscribe {
+    padding: 0;
+}
+
+/* Тёмный фон */
+.subscribe-wrapper {
+    background: #4F5564; /* Скорректирован под точный цвет фона на фото */
+    padding: 12px 20px;
+    border-radius: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Левая и правая части */
+.subscribe-left,
+.subscribe-right {
+    display: flex;
+    align-items: center;
+    gap: 7px; 
+}
+
+/* Иконки */
+.sub-icon {
+    width: 36px;   
+    height: 36px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Двухстрочный текст */
+.sub-text {
+    line-height: 0.60;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-green {
+    color: #89CE16; /* Точный сочный зеленый с картинки */
+    font-size: 15px; /* Чуть уменьшен для идеального баланса */
+    font-family: "Ubuntu_bold", sans-serif;
+    white-space: nowrap;
+}
+
+.sub-white {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Ubuntu_bold", sans-serif;
+    white-space: nowrap;
+}
+
+/* Ссылка/текст "Заказать звонок" */
+.sub-link {
+    color: #89CE16; /* На картинке он зеленый, как и левый текст */
+    font-size: 15px;
+    font-family: "Ubuntu_bold", sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+
+   
+}
+
+.subscribe-right .sub-icon {
+    width: 22px;   /* Уменьшили размер (было 36px) */
+    height: 22px;  
+
+    margin-top: -10px;
+}
+
+/* Выравнивание правой части */
+.subscribe-right {
+    display: flex;
+    align-items: center;
+    align-self: center; 
+    gap: 10px;      
+    
+    transform: translateY(5px);
+}
+
+/* Форма подписки (Инпут + Кнопка) */
+.subscribe-center {
+    display: flex;
+    align-items: center;
+    gap: 0; 
+}
+
+
+/* Поле ввода */
+.sub-input {
+    width: 250px; /* Подогнано под пропорции картинки */
+    padding: 11px 14px;
+    border-radius: 0;
+    border: none;
+    font-size: 14px;
+    font-family: "Ubuntu", sans-serif;
+    color: #757575;
+    outline: none;
+}
+
+/* Кнопка */
+.sub-btn {
+    background: #4F9C2C;
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 0;
+    border: none;
+    font-size: 14px;
+    font-family: "Ubuntu_bold", sans-serif;
+    text-transform: uppercase; /* На картинке текст "ПОДПИСАТЬСЯ" капсом */
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.sub-btn:hover {
+    background: #43a047;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 992px) {
+    .subscribe-wrapper {
+        /* Запрещаем перенос на новую строку, чтобы сохранить вид "как на картинке" */
+        flex-wrap: nowrap; 
+        justify-content: space-between;
+        padding: 10px 15px;
+        gap: 15px; /* Немного сужаем зазоры, чтобы всё уместилось */
+    }
+
+    .subscribe-left {
+        order: 1;
+    }
+
+    .subscribe-right {
+        order: 2;
+    }
+
+    .subscribe-center {
+        order: 3;
+    }
+
+    /* Уменьшаем ширину инпута, чтобы на планшетах (например, 768px) строка не ломалась */
+    .sub-input {
+        width: 180px; 
+    }
+    
+    /* Чуть уменьшаем шрифты для адаптива */
+    .sub-green, .sub-white, .sub-link {
+        font-size: 16px;
+    }
+    
+    .sub-btn, .sub-input {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+}
+
+/* Подвал */
+.footer {
+    background: #F4F5F7; /* Более точный цвет серого фона с макета */
+    padding: 40px 0 35px 0; /* Уменьшен vertical padding для компактности как на фото */
+    color: #000000;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Двухстрочная жесткая сетка */
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    /* Разделение на 3 пропорциональные колонки */
+    grid-template-columns: 1.2fr 1.2fr 1fr; 
+    
+    grid-template-rows: auto auto;
+   
+    grid-template-areas: 
+        "brand contacts social"
+        "copy  policy   payments";
+   
+    row-gap: 45px; 
+    column-gap: 40px;
+    align-items: start;
+}
+
+.footer-brand        { grid-area: brand; }
+.footer-contacts     { grid-area: contacts; }
+.footer-social       { grid-area: social; justify-self: end; }
+.footer-bottom-left  { grid-area: copy; }
+.footer-bottom-right { grid-area: policy; }
+.footer-payments     { grid-area: payments; justify-self: end; }
+
+/* Стили */
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+.logo-green {
+    color: #73CD1F; /* Насыщенный салатовый */
+}
+
+.footer-text {
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #1A1A1A;
+    margin: 12px 0 0 0;
+    max-width: 290px;
+}
+
+/* Блок контактов */
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-phone {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+    font-family: "Ubuntu", sans-serif;
+}
+.footer-address {
+    font-size: 14px;
+    color: #1A1A1A;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+/* Соцсети (в одну линию, прижаты вправо) */
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+.footer-social img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+/* Нижняя строка */
+.footer-copy, 
+.footer-policy {
+    font-size: 12px;
+    color: #8D8E9E; /* Тонкий приглушенный цвет текста внизу */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px; /* Корректировка baseline */
+}
+.footer-policy:hover {
+    text-decoration: underline;
+}
+
+/* Платежные системы (выровнены по правому краю, выстроены по центру по вертикали) */
+.footer-payments {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.footer-payments img {
+    object-fit: contain;
+}
+.footer-payments .pay-visa { height: 16px; }
+.footer-payments .pay-master { height: 26px; }
+.footer-payments .pay-robo { height: 15px; }
+
+/* Планшетный адаптив без разрушения структуры */
+@media (max-width: 992px) {
+    .footer-wrapper {
+        grid-template-columns: 1.1fr 1.1fr auto;
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+     /* Скрываем "Зарабатывайте вместе с нами" */
+    .how-it-works {
+        display: none;
+    }
+
+    /* Скрываем Новости */
+    .news {
+        display: none;
+    }
+
+    /* Скрываем Партнёров */
+    .partners {
+        display: none;
+    }
+
+    /* Скрываем Подписку */
+    .subscribe {
+        display: none;
+    }
+
+    /* Скрываем Подвал */
+    .footer {
+        display: none;
+    }
+}
