@@ -313,12 +313,6 @@ body {
     color: #4F9C2C;
 }
 
-/* Активный пункт ("Операторское оборудование") */
-.header__menu-list a.active {
-    color: #8EE902;
-    font-weight: 500;
-}
-
 /* Прижатие новинок к низу левой колонки */
 .mt-auto {
     margin-top: auto;
