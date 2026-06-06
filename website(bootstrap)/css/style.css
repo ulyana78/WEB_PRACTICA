@@ -296,9 +296,7 @@ header .btn:hover::after {
     transition: filter 0.2s ease; /* Добавляем плавность перехода */
 }
 
-/* Эффект наведения для иконок в сетке цен */
-
-/* При наведении на иконку она становится фирменной зеленой */
+/* ховер эффект для иконок */
 .icon-action:hover {
     filter: invert(53%) sepia(85%) saturate(389%) hue-rotate(52deg) brightness(93%) contrast(85%) !important;
 }

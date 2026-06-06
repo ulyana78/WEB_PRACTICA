@@ -10,32 +10,37 @@
 
 <body>
 
-<!-- Шапка -->    
 <header class="header">
     <div class="header__inner">
 
-        
-        <!-- Левая часть (десктоп) -->
         <div class="header__left">
             <button class="header__burger">
-                <img src="image/menu.svg" alt="">
+                <img src="image/menu.svg" alt="Меню">
             </button>
         </div>
 
-        <!-- Мобильные иконки слева -->
         <div class="header__mobile-left">
-            <img src="image/star.svg" class="icon-img" alt="">
-            <img src="image/compare.svg" class="icon-img" alt="">
-            <img src="image/shopping-cart.svg" class="icon-img" alt="">
+            <div class="img-badge-container">
+                <img src="image/star.svg" class="icon-img" alt="Избранное">
+                <img src="image/number5.png" class="badge-img" alt="5">
+            </div>
+
+            <div class="img-badge-container">
+                <img src="image/compareBlack.svg" class="icon-img" alt="Сравнение">
+                <img src="image/number7.png" class="badge-img" alt="7">
+            </div>
+
+            <div class="img-badge-container">
+                <img src="image/shopping-cart.svg" class="icon-img" alt="Корзина">
+                <img src="image/number2.png" class="badge-img" alt="2">
+            </div>
         </div>
 
-        <!-- Логотип -->
         <div class="header__logo">
             <img src="image/logo.png" class="logo-desktop" alt="">
             <img src="image/logoPhone.png" class="logo-mobile" alt="">
         </div>
 
-        <!-- Правая часть -->
         <div class="header__right">
 
             <div class="header__phone">
@@ -44,25 +49,75 @@
             </div>
 
             <div class="header__icons">
-                <img src="image/star.svg" alt="">
-                <img src="image/compare.svg" alt="">
-                <img src="image/shopping-cart.svg" alt="">
-                <div class="header__divider"></div> 
+                <div class="img-badge-container hide-on-mobile">
+                    <img src="image/star.svg" class="icon-img" alt="Избранное">
+                    <img src="image/number5.png" class="badge-img" alt="5">
+                </div>
+
+                <div class="img-badge-container hide-on-mobile">
+                    <img src="image/compareBlack.svg" class="icon-img" alt="Сравнение">
+                    <img src="image/number7.png" class="badge-img" alt="7">
+                </div>
+
+                <div class="img-badge-container hide-on-mobile">
+                    <img src="image/shopping-cart.svg" class="icon-img" alt="Корзина">
+                    <img src="image/number2.png" class="badge-img" alt="2">
+                </div>
+
+                <div class="header__divider hide-on-mobile"></div> 
+                
+                <img src="image/search.svg" class="icon-img" alt="Поиск">
+                
+                <div class="header__divider hide-on-mobile"></div> 
+                
+                <img src="image/user (1).svg" class="icon-img icon-user" alt="Профиль">
+                
+                <img src="image/locked.svg" class="icon-img icon-lock" alt="Замок">
+
+                <button class="header__burger mobile-burger">
+                    <img src="image/menu.svg" alt="Меню">
+                </button>
+            </div> 
+        </div>
+    </div>
+
+    <div class="header__menu" id="headerMenu">
+        <div class="header__menu-inner">
+            
+            <div class="header__menu-col header__menu-col--catalog">
+                <a href="#" class="header__menu-title header__menu-title--green">Каталог</a>
+                <ul class="header__menu-list">
+                    <li><a href="#">Камеры</a></li>
+                    <li><a href="#">Оптика</a></li>
+                    <li><a href="#" class="active">Операторское оборудование</a></li>
+                    <li><a href="#">Свет</a></li>
+                    <li><a href="#">Звуковое оборудование</a></li>
+                    <li><a href="#">Для трансляций</a></li>
+                    <li><a href="#">Специальное оборудование</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                </ul>
+                <a href="#" class="header__menu-title header__menu-title--green mt-auto">Новинки в прокате</a>
             </div>
 
-            <img src="image/search.svg" class="icon-img" alt="">
-              <div class="header__divider"></div> 
-            <img src="image/user (1).svg" class="icon-img icon-user" alt="">
-            <img src="image/locked.svg" class="icon-img icon-lock" alt="">
+            <div class="header__menu-col header__menu-col--info">
+                <ul class="header__menu-list">
+                    <li><a href="#">Как это работает</a></li>
+                    <li><a href="#">Правила аренды</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Договор оферты</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
 
-            <!-- Бургер для мобильной версии -->
-            <button class="header__burger mobile-burger">
-                <img src="image/menu.svg" alt="">
-            </button>
         </div>
-
     </div>
 </header>
+
+<script src="js/script.js"></script>
 
 <!-- Главный экран -->
 <section class="hero">    
@@ -112,143 +167,131 @@
     </div>
 </section>
 
+<!--Карточка товара -->
+ <section class="popular">
+    <h2 class="popular__title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
 
- <!-- Карточка товара -->
-<section class="popular">
-     <h2 class="popular__title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+    <div class="popular-slider-wrapper">
 
-     <div class="popular-slider-wrapper">
-
-        <!-- Левая стрелка -->
         <button class="popular-arrow left-arrow">
-            <img src="image/left.png" alt="">
+            <img src="image/left.png" alt="Назад">
         </button>
 
-    <div class="popular__grid">
+        <div class="popular__grid">
 
-        <!-- Карточка -->
-        <div class="product-card">
-
-            <div class="product-icons">
-            <img src="image/compareBlack.svg" alt="">
-            <img src="image/star.svg" alt="">
-        </div>
-
-            <img src="image/camera1.png" alt="" class="product-img">
-
-            <h3 class="product-name">PowerShot SX620 HS</h3>
-            <div class="product-brand">Canon</div>
-
-            <div class="product-prices">
-                <div class="price-item">
-                    <div class="price-value">630 <span class="ruble">₽</span></div>
-                    <div class="price-label">Будний</div>
+            <div class="product-card">
+                <div class="product-icons">
+                    <img src="image/compareBlack.svg" alt="Сравнение" class="product-icons__img">
+                    <img src="image/star.svg" alt="В избранное" class="product-icons__img">
                 </div>
-                <div class="price-item">
-                    <div class="price-value">750 <span class="ruble">₽</span></div>
-                    <div class="price-label">Выходной</div>
+
+                <img src="image/camera1.png" alt="Камера" class="product-img">
+
+                <h3 class="product-name">PowerShot SX620 HS</h3>
+                <div class="product-brand">Canon</div>
+
+                <div class="product-prices">
+                    <div class="price-item">
+                        <div class="price-value">630 <span class="ruble">₽</span></div>
+                        <div class="price-label">Будний</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">750 <span class="ruble">₽</span></div>
+                        <div class="price-label">Выходной</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">4 380 <span class="ruble">₽</span></div>
+                        <div class="price-label">Неделя</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">12 250 <span class="ruble">₽</span></div>
+                        <div class="price-label">Месяц</div>
+                    </div>
                 </div>
-                <div class="price-item">
-                    <div class="price-value">4 380 <span class="ruble">₽</span></div>
-                    <div class="price-label">Неделя</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-value">12 250 <span class="ruble">₽</span></div>
-                    <div class="price-label">Месяц</div>
-                </div>
-            </div>
 
-            <div class="product-buttons">
-                <a href="#" class="btn-outline">Подробнее</a>
-                <a href="#" class="btn-dark">В корзину</a>
-            </div>
-        </div>
-
-        <!-- Карточка 2 -->
-        <div class="product-card">
-
-            <div class="product-icons">
-            <img src="image/compareBlack.svg" alt="">
-            <img src="image/star.svg" alt="">
-            </div>
-
-
-            <img src="image/camera2.png" alt="" class="product-img">
-
-            <h3 class="product-name">Sony CyberShot DSC-HX60</h3>
-            <div class="product-brand">Sony</div>
-
-            <div class="product-prices">
-                <div class="price-item">
-                    <div class="price-value">630 ₽</div>
-                    <div class="price-label">Будний</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-value">750 ₽</div>
-                    <div class="price-label">Выходной</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-value">4 380 ₽</div>
-                    <div class="price-label">Неделя</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-value">12 250 ₽</div>
-                    <div class="price-label">Месяц</div>
+                <div class="product-buttons">
+                    <a href="#" class="btn-outline">Подробнее</a>
+                    <a href="#" class="btn-dark">В корзину</a>
                 </div>
             </div>
 
-            <div class="product-buttons">
-                <a href="#" class="btn-outline">Подробнее</a>
-                <a href="#" class="btn-dark">В корзину</a>
-            </div>
-        </div>
-
-        <!-- Карточка 3 -->
-        <div class="product-card">
-
-            <div class="product-icons">
-            <img src="image/compareBlack.svg" alt="">
-            <img src="image/star.svg" alt="">
-        </div>
-
-
-            <img src="image/camera3.png" alt="" class="product-img">
-
-            <h3 class="product-name">Canon PowerShot SX620 HS</h3>
-            <div class="product-brand">Canon</div>
-
-            <div class="product-prices">
-                <div class="price-item">
-                    <div class="price-value">630 ₽</div>
-                    <div class="price-label">Будний</div>
+            <div class="product-card">
+                <div class="product-icons">
+                    <img src="image/compareBlack.svg" alt="Сравнение" class="product-icons__img">
+                    <img src="image/star.svg" alt="В избранное" class="product-icons__img">
                 </div>
-                <div class="price-item">
-                    <div class="price-value">750 ₽</div>
-                    <div class="price-label">Выходной</div>
+
+                <img src="image/camera2.png" alt="Камера" class="product-img">
+
+                <h3 class="product-name">Sony CyberShot DSC-HX60</h3>
+                <div class="product-brand">Sony</div>
+
+                <div class="product-prices">
+                    <div class="price-item">
+                        <div class="price-value">630 ₽</div>
+                        <div class="price-label">Будний</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">750 ₽</div>
+                        <div class="price-label">Выходной</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">4 380 ₽</div>
+                        <div class="price-label">Неделя</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">12 250 ₽</div>
+                        <div class="price-label">Месяц</div>
+                    </div>
                 </div>
-                <div class="price-item">
-                    <div class="price-value">4 380 ₽</div>
-                    <div class="price-label">Неделя</div>
-                </div>
-                <div class="price-item">
-                    <div class="price-value">12 250 ₽</div>
-                    <div class="price-label">Месяц</div>
+
+                <div class="product-buttons">
+                    <a href="#" class="btn-outline">Подробнее</a>
+                    <a href="#" class="btn-dark">В корзину</a>
                 </div>
             </div>
 
-            <div class="product-buttons">
-                <a href="#" class="btn-outline">Подробнее</a>
-                <a href="#" class="btn-dark">В корзину</a>
-            </div>
-        </div>
+            <div class="product-card">
+                <div class="product-icons">
+                    <img src="image/compareBlack.svg" alt="Сравнение" class="product-icons__img">
+                    <img src="image/star.svg" alt="В избранное" class="product-icons__img">
+                </div>
 
-          <!-- Правая стрелка -->
-        <button class="popular-arrow right-arrow">
-            <img src="image/right.png" alt="">
+                <img src="image/camera3.png" alt="Камера" class="product-img">
+
+                <h3 class="product-name">Canon PowerShot SX620 HS</h3>
+                <div class="product-brand">Canon</div>
+
+                <div class="product-prices">
+                    <div class="price-item">
+                        <div class="price-value">630 ₽</div>
+                        <div class="price-label">Будний</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">750 ₽</div>
+                        <div class="price-label">Выходной</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">4 380 ₽</div>
+                        <div class="price-label">Неделя</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value">12 250 ₽</div>
+                        <div class="price-label">Месяц</div>
+                    </div>
+                </div>
+
+                <div class="product-buttons">
+                    <a href="#" class="btn-outline">Подробнее</a>
+                    <a href="#" class="btn-dark">В корзину</a>
+                </div>
+            </div>
+
+        </div> <button class="popular-arrow right-arrow">
+            <img src="image/right.png" alt="Вперед">
         </button>
 
-    </div>
-</section>
+    </div> </section>
 
  <!-- Раздел "Вы ищете что-то конкретное?" -->
 <section class="search-info">
@@ -286,7 +329,7 @@
     </div>
 
     <div class="category-card" style="background-image: url('image/photo-6.png');">
-        <div class="category-text">Видеокамеры<br><span>по 200 рублей в сутки</span></div>
+        <div class="category-text bg-secondary-gray">Видеокамеры<br><span>по 200 рублей в сутки</span></div>
     </div>
 
     <div class="category-card" style="background-image: url('image/photo-5.png');">
