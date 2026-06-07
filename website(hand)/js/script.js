@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('headerMenu');
 
     if (burgerButtons.length && menu) {
-        // Ловим клик по любому бургеру (десктоп / мобилка)
+       
         burgerButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 e.stopPropagation(); 
